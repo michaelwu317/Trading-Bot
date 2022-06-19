@@ -1,10 +1,12 @@
 import alpaca_trade_api as tradeapi
+from config import *
+import requests
 
-public_key = '' #protected
-secret_key = '' #protected
-api_url = 'https://paper-api.alpaca.markets' 
-#api = tradeapi.REST(key_id= public_key, secret_key=secret_key, base_url=api_url) 
-
+base_url = "https://paper-api.alpaca.markets"
+account_url = "{}/v2/accounts".format(base_url)
+orders_url = "{}/v2/orders".format(base_url)
+#r = requests.get
+#continuous block
 while True:
     x = 1
-    print(x)
+    
